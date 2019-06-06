@@ -17,8 +17,9 @@ var arr = [10,20,30];
   Return the first item in the given array.
 */
 
-//Code Here
-
+function first(arr){
+  return arr[0]
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -32,8 +33,9 @@ var arr = [40,50,60];
   Return the last item in the given array.
 */
 
-//Code Here
-
+function last(arr){
+  return arr[2]
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -47,8 +49,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
   Loop through the given array and alert every item in the array.
 */
 
-//Code Here
-
+function looper(family){
+  for(i = 0; i < family.length; i++){
+    window.alert(family[i])
+  }
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -62,8 +67,11 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
   Loop backwards, starting at the end of the letters array, alerting every item in the array.
 */
 
-//Code Here
-
+function reversedLooper(letters){
+  for(i = letters.length -1; i >=0; i--){
+    window.alert(letters[i])
+  }
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -77,7 +85,15 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
   Return an array that contains the even numbers from the nums array.
 */
 
-//Code Here
+function evenFinder(nums){
+  var evens = []
+  for(i = 0; i < nums.length; i++){
+    if(nums[i] % 2 === 0){
+      evens.push(nums[i])
+    }
+  }
+  return evens
+}
 
 
 
@@ -220,7 +236,18 @@ for(var i = 0; i < num2; i++){
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
 
-//Code Here
+function both(arr1, arr2){
+  const newArr = []
+  //Find duplicates and return in array
+  for(let i=0; i<arr1.length; i++){
+    for(let j=0; j<arr2.length; j++){
+      if(arr2[j] === arr1[i]){
+        newArr.push(arr2[j])
+      }
+    }
+  }
+  return newArr
+}
 
 
 
